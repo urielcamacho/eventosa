@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evento-sa.com/sitemap.xml
