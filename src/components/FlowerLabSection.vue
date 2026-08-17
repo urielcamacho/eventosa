@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { flowerLabItems } from '../data/content'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import WhatsAppButton from './WhatsAppButton.vue'
+import { assetUrl } from '../config/assets'
 
 const root = ref<HTMLElement | null>(null)
 useSectionReveal(root)
@@ -18,13 +19,13 @@ const flowerBottomRight = flowerLabItems[5]!
 <template>
   <section id="flower-lab" ref="root" class="section flower-lab" aria-labelledby="flower-lab-title">
     <header class="section-banner section-banner--flower" data-reveal>
-      <img src="/media/wireframes/texture-paper.jpg" alt="" aria-hidden="true" />
+      <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" aria-hidden="true" />
       <div class="page-shell section-banner__inner">
         <div>
           <p class="eyebrow">Flower Lab</p>
           <h2 id="flower-lab-title">Las flores son lenguaje, <em>comunican lo que no se dice.</em></h2>
         </div>
-        <img class="section-banner__mark" src="/media/wireframes/500x500.svg" alt="" aria-hidden="true" />
+        <img class="section-banner__mark" :src="assetUrl('/media/wireframes/icons/flower-lab.png')" alt="" aria-hidden="true" />
       </div>
     </header>
     <div class="page-shell">

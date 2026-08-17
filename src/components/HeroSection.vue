@@ -3,6 +3,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BrandMotion from './BrandMotion.vue'
+import { assetUrl } from '../config/assets'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -62,7 +63,7 @@ onBeforeUnmount(() => {
   <section id="inicio" ref="root" class="hero" aria-labelledby="hero-title">
     <div class="hero__media">
       <img
-        src="/media/wireframes/hero-showroom.jpg"
+        :src="assetUrl('/media/wireframes/hero-showroom.jpg')"
         alt="Showroom de Eventosa con vajilla, cristalería y materiales para eventos."
         width="1664"
         height="1110"

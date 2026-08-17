@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { serviceHighlights } from '../data/content'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import ServiceIcon from './ServiceIcon.vue'
+import { assetUrl } from '../config/assets'
 
 const root = ref<HTMLElement | null>(null)
 const servicesTrack = ref<HTMLElement | null>(null)
@@ -20,10 +21,10 @@ function scrollServices(direction: number) {
         <p data-reveal class="eyebrow">Lo que hacemos</p>
       </div>
       <div class="section-banner section-banner__services" data-reveal>
-        <img src="/media/wireframes/texture-paper.jpg" alt="" aria-hidden="true" />
+        <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" aria-hidden="true" />
         <div class="page-shell section-banner__inner">
           <p>Diseñamos experiencias que se sienten,<br />se celebran y se recuerdan...</p>
-          <img class="section-banner__mark" src="/brand/eventosa-isotype-olive.png" alt="" aria-hidden="true" />
+          <img class="section-banner__mark" :src="assetUrl('/brand/eventosa-isotype-olive.png')" alt="" aria-hidden="true" />
         </div>
       </div>
     </header>

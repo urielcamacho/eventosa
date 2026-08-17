@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteConfig } from '../config/site'
 import WhatsAppButton from './WhatsAppButton.vue'
+import { assetUrl } from '../config/assets'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,7 +22,7 @@ const dialog = ref<HTMLDialogElement | null>(null)
 const menuButton = ref<HTMLButtonElement | null>(null)
 let headerTrigger: ScrollTrigger | undefined
 
-const logoSource = computed(() => '/brand/eventosa-horizontal-olive.png')
+const logoSource = computed(() => assetUrl('/brand/eventosa-horizontal-olive.png'))
 
 onMounted(() => {
   headerTrigger = ScrollTrigger.create({
@@ -106,7 +107,7 @@ function handleDialogClose() {
       @keydown.esc="closeMenu"
     >
       <div class="mobile-menu__top">
-        <img src="/brand/eventosa-horizontal-olive.png" alt="Eventosa" width="1327" height="596" />
+        <img :src="assetUrl('/brand/eventosa-horizontal-olive.png')" alt="Eventosa" width="1327" height="596" />
         <button type="button" aria-label="Cerrar menú" @click="closeMenu">
           <span></span><span></span>
         </button>

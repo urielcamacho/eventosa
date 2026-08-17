@@ -4,6 +4,7 @@ import { siteConfig } from '../config/site'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import WhatsAppButton from './WhatsAppButton.vue'
 import BrandCanvas from './webgl/BrandCanvas.vue'
+import { assetUrl } from '../config/assets'
 
 const root = ref<HTMLElement | null>(null)
 useSectionReveal(root)
@@ -12,7 +13,7 @@ useSectionReveal(root)
 <template>
   <section id="visitanos" ref="root" class="visit-section section" aria-labelledby="visit-title">
     <header class="section-banner" data-reveal>
-      <img src="/media/wireframes/texture-paper.jpg" alt="" aria-hidden="true" />
+      <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" aria-hidden="true" />
       <div class="page-shell section-banner__inner">
         <p id="visit-title">Aquí comienza la transformación...</p>
       </div>
@@ -47,7 +48,7 @@ useSectionReveal(root)
             Abrir ubicación
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></svg>
           </a>
-          <img class="visit-section__logo" src="/brand/eventosa-isotype-olive.png" alt="Eventosa" width="592" height="592" />
+          <img class="visit-section__logo" :src="assetUrl('/brand/eventosa-isotype-olive.png')" alt="Eventosa" width="592" height="592" />
         </address>
       </div>
 

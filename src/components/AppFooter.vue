@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { siteConfig } from '../config/site'
 import WhatsAppButton from './WhatsAppButton.vue'
+import { assetUrl } from '../config/assets'
 
 const footerLinks = [
   { label: 'Nosotros', href: '#nosotros' },
@@ -16,7 +17,7 @@ const footerLinks = [
     <div class="page-shell">
       <div class="site-footer__top">
         <div class="site-footer__brand">
-          <img src="/brand/eventosa-horizontal-olive.png" alt="Eventosa" width="1327" height="596" />
+          <img :src="assetUrl('/brand/eventosa-horizontal-olive.png')" alt="Eventosa" width="1327" height="596" />
           <p>Creamos momentos que trascienden lo cotidiano.</p>
         </div>
         <p class="site-footer__signature">Rentals <i>·</i> Design <i>·</i> Flowers</p>

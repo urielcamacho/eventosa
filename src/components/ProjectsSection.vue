@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { siteConfig } from '../config/site'
 import { projects } from '../data/content'
 import { useSectionReveal } from '../composables/useSectionReveal'
+import { assetUrl } from '../config/assets'
 
 const root = ref<HTMLElement | null>(null)
 const galleryTrack = ref<HTMLElement | null>(null)
@@ -20,10 +21,10 @@ function scrollGallery(direction: number) {
         <p data-reveal class="eyebrow">Inspiración real</p>
       </div>
       <div class="section-banner section-banner--olive" data-reveal>
-        <img src="/media/wireframes/texture-paper.jpg" alt="" aria-hidden="true" />
+        <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" aria-hidden="true" />
         <div class="page-shell section-banner__inner">
           <h2 id="projects-title">Expertos en contar historias <em>a través de los detalles...</em></h2>
-          <img class="section-banner__mark" src="/brand/eventosa-isotype-olive.png" alt="" aria-hidden="true" />
+          <img class="section-banner__mark" :src="assetUrl('/brand/eventosa-isotype-olive.png')" alt="" aria-hidden="true" />
         </div>
       </div>
     </header>

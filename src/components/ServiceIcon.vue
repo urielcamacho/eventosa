@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import type { ServiceHighlight } from '../data/content'
+import { assetUrl } from '../config/assets'
 
 const props = defineProps<{
   icon: ServiceHighlight['icon']
 }>()
 
 const iconSrc: Record<ServiceHighlight['icon'], string> = {
-  tent: '/media/wireframes/500x500.svg',
-  chair: '/media/wireframes/500x500.svg',
-  glass: '/media/wireframes/500x500.svg',
+  tent: assetUrl('/media/wireframes/icons/tent.png'),
+  chair: assetUrl('/media/wireframes/icons/chair.png'),
+  glass: assetUrl('/media/wireframes/icons/glass.png'),
 }
 </script>
 

@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { siteConfig } from './config/site'
 import WhatsAppButton from './components/WhatsAppButton.vue'
+import { assetUrl } from './config/assets'
 </script>
 
 <template>
   <main class="privacy-page">
     <a class="privacy-page__brand" href="/" aria-label="Volver al inicio de Eventosa">
-      <img src="/brand/eventosa-horizontal-olive.png" alt="Eventosa" width="1327" height="596" />
+      <img :src="assetUrl('/brand/eventosa-horizontal-olive.png')" alt="Eventosa" width="1327" height="596" />
     </a>
     <section class="privacy-page__card" aria-labelledby="privacy-title">
       <p class="eyebrow">Documento legal</p>

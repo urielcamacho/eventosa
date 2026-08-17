@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import gsap from 'gsap'
+import { assetUrl } from '../config/assets'
 
 const loader = ref<HTMLElement | null>(null)
 let context: gsap.Context | undefined
@@ -31,7 +32,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div ref="loader" class="brand-loader" aria-hidden="true">
-    <img class="brand-loader__mark" src="/brand/eventosa-monogram-olive.png" alt="" />
+    <img class="brand-loader__mark" :src="assetUrl('/brand/eventosa-monogram-olive.png')" alt="" />
     <span class="brand-loader__line"></span>
   </div>
 </template>
