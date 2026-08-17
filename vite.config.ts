@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 const rootDirectory = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH ?? '/',
   plugins: [vue(), tailwindcss()],
   build: {
     rollupOptions: {

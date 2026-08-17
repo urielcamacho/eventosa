@@ -14,10 +14,10 @@ useSectionReveal(root)
       <header class="section-heading section-heading--split">
         <div>
           <p data-reveal class="eyebrow">Así comenzamos</p>
-          <h2 id="process-title" data-reveal>Todo empieza con <em>una conversación.</em></h2>
+          <h2 id="process-title" data-reveal>Tu idea es el inicio de <em>algo extraordinario.</em></h2>
         </div>
         <p data-reveal class="section-heading__copy">
-          Cuéntanos qué estás planeando y te ayudaremos a identificar las opciones que mejor se ajustan a tu evento.
+          Cuéntanos qué estás planeando. Aterrizamos contigo el estilo, el alcance y los detalles para darle forma a una propuesta que se sienta completamente tuya.
         </p>
       </header>
 

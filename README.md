@@ -1,27 +1,24 @@
 # Eventosa
 
-Landing estática de Eventosa construida con Vue 3, TypeScript, Vite, Tailwind CSS y GSAP.
+Landing estática de Eventosa construida con Vue 3, Vite, TypeScript, Tailwind CSS, GSAP y OGL.
 
-## Desarrollo
+## Desarrollo local
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Verificación
+## Validación
 
 ```bash
-npm run lint
-npm run typecheck
-npm run test
 npm run build
+npm run lint
+npm run test -- --run
 ```
 
-## Fotografías pendientes
+## Publicación en GitHub Pages
 
-Los bloques visuales muestran el nombre, descripción y dimensiones requeridas para cada fotografía final. Las imágenes deben sustituirse en el componente correspondiente sin modificar sus proporciones ni el texto alternativo descriptivo.
+El workflow `.github/workflows/deploy-pages.yml` construye y publica `dist` automáticamente en cada push a `main`. La base de Vite se configura con el nombre del repositorio mediante `VITE_BASE_PATH`, por lo que los assets funcionan tanto en local como bajo `https://<usuario>.github.io/<repositorio>/`.
 
-## Datos del sitio
-
-Los enlaces verificados, mensajes de WhatsApp y datos de ubicación se administran desde `src/config/site.ts`. El contenido legal de `/aviso-de-privacidad/` debe reemplazarse únicamente cuando Eventosa entregue un texto validado.
+En el repositorio de GitHub, selecciona **Settings → Pages → Source: GitHub Actions**. Después de habilitarlo, cada push a `main` actualizará el sitio.

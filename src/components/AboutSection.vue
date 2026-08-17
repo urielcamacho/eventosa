@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useSectionReveal } from '../composables/useSectionReveal'
-import ImagePlaceholder from './ImagePlaceholder.vue'
+import BrandMotion from './BrandMotion.vue'
 
 const root = ref<HTMLElement | null>(null)
 useSectionReveal(root)
@@ -13,30 +13,22 @@ useSectionReveal(root)
     <img class="about__flower-motif" src="/brand/eventosa-flower-motif.png" alt="" aria-hidden="true" />
     <div class="page-shell about__grid">
       <div class="about__media" data-reveal>
-        <ImagePlaceholder
-          label="Nosotros"
-          dimensions="1200 × 1500 px"
-          description="Equipo, showroom o proceso creativo."
-          ratio="4/5"
-          tone="gray"
-        />
-        <ImagePlaceholder
-          class="about__detail"
-          label="Detalle"
-          dimensions="1200 × 800 px"
-          description="Manos preparando flores, vajilla o elementos del montaje."
-          ratio="3/2"
-          tone="yellow"
+        <img
+          class="about__main-image"
+          src="/media/wireframes/about-showroom.jpg"
+          alt="Showroom de Eventosa con muestras de textiles, vajilla y mobiliario."
+          width="1248"
+          height="833"
+          loading="lazy"
         />
       </div>
       <div class="about__content">
-        <p data-reveal class="eyebrow">Desde 2005</p>
-        <h2 id="about-title" data-reveal>Experiencia que se nota en <em>los detalles.</em></h2>
-        <div data-reveal class="about__copy">
-          <p>Nuestra trayectoria nos ha enseñado que un gran resultado se construye escuchando, eligiendo bien y cuidando cada elemento.</p>
-          <p>Hoy reunimos Rentals, Design y Flowers bajo una misma identidad: fresca, cercana y atenta a los detalles.</p>
+        <p data-reveal class="eyebrow">Nosotros</p>
+        <div id="about-title" class="about__statement" data-reveal>
+          <BrandMotion variant="about" />
+          <p>Creamos atmósferas que brillan<br />por un momento...<br />y dejan la magia por siempre.</p>
         </div>
-        <blockquote data-reveal>“Tu estilo es el punto de partida.”</blockquote>
+        <img data-reveal class="about__wordmark" src="/brand/eventosa-horizontal-olive.png" alt="Eventosa" />
       </div>
     </div>
   </section>

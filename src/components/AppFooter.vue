@@ -3,10 +3,11 @@ import { siteConfig } from '../config/site'
 import WhatsAppButton from './WhatsAppButton.vue'
 
 const footerLinks = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Proyectos', href: '#proyectos' },
   { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Servicios', href: '#servicios' },
+  { label: 'Galería', href: '#galeria' },
+  { label: 'Flower Lab', href: '#flower-lab' },
+  { label: 'Contacto', href: '#visitanos' },
 ]
 </script>
 
@@ -16,7 +17,7 @@ const footerLinks = [
       <div class="site-footer__top">
         <div class="site-footer__brand">
           <img src="/brand/eventosa-horizontal-olive.png" alt="Eventosa" width="1327" height="596" />
-          <p>Celebraciones con estilo, cuidadas en cada detalle.</p>
+          <p>Creamos momentos que trascienden lo cotidiano.</p>
         </div>
         <p class="site-footer__signature">Rentals <i>·</i> Design <i>·</i> Flowers</p>
       </div>

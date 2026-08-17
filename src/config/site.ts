@@ -4,9 +4,9 @@ export const siteConfig = {
   instagramUrl: 'https://www.instagram.com/evento_sa/',
   privacyPath: '/aviso-de-privacidad/',
   whatsappNumber: '522212200402',
-  address: 'Camino Real a Cholula #1, esquina con Av. Alejandra, C.P. 72124 Puebla, Pue.',
+  address: 'Federal a Atlixco no. 3002, Puebla, Pue.',
   mapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=Camino%20Real%20a%20Cholula%20%231%2C%20Puebla%2C%20Pue.%2072124',
+    'https://www.google.com/maps/search/?api=1&query=Federal%20a%20Atlixco%20no.%203002%2C%20Puebla%2C%20Pue.',
   whatsappMessages: {
     general: 'Hola, me gustaría recibir información para mi evento.',
     rentals: 'Hola, me gustaría recibir información sobre Rentals para mi evento.',

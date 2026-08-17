@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import ImagePlaceholder from './ImagePlaceholder.vue'
 import WhatsAppButton from './WhatsAppButton.vue'
+import BrandMotion from './BrandMotion.vue'
 
 const root = ref<HTMLElement | null>(null)
 useSectionReveal(root)
@@ -18,11 +19,12 @@ useSectionReveal(root)
       ratio="16/9"
       tone="olive"
     />
+    <BrandMotion variant="cta" />
     <div class="final-cta__shade" aria-hidden="true" />
     <div class="page-shell final-cta__content">
       <p data-reveal class="eyebrow eyebrow--light">Hablemos de tu evento</p>
-      <h2 id="contact-title" data-reveal>¿Qué tienes <em>en mente?</em></h2>
-      <p data-reveal>Escríbenos por WhatsApp y cuéntanos la fecha, el tipo de evento y lo que necesitas. Será un gusto conocer tu idea.</p>
+      <h2 id="contact-title" data-reveal>Hagamos que tu celebración se sienta <em>tan única como tú.</em></h2>
+      <p data-reveal>Escríbenos por WhatsApp y cuéntanos la fecha, el tipo de evento y lo que necesitas. Empecemos a darle forma a tu idea.</p>
       <div data-reveal>
         <WhatsAppButton label="Platiquemos por WhatsApp" variant="light" />
       </div>

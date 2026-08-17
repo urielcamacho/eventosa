@@ -3,35 +3,56 @@ import { ref } from 'vue'
 import { siteConfig } from '../config/site'
 import { projects } from '../data/content'
 import { useSectionReveal } from '../composables/useSectionReveal'
-import ImagePlaceholder from './ImagePlaceholder.vue'
 
 const root = ref<HTMLElement | null>(null)
+const galleryTrack = ref<HTMLElement | null>(null)
 useSectionReveal(root)
+
+function scrollGallery(direction: number) {
+  galleryTrack.value?.scrollBy({ left: direction * galleryTrack.value.clientWidth * 0.72, behavior: 'smooth' })
+}
 </script>
 
 <template>
-  <section id="proyectos" ref="root" class="section projects" aria-labelledby="projects-title">
-    <div class="page-shell">
-      <header class="section-heading section-heading--split">
-        <div>
-          <p data-reveal class="eyebrow">Inspiración real</p>
-          <h2 id="projects-title" data-reveal>Ideas que <em>toman forma.</em></h2>
+  <section id="galeria" ref="root" class="section projects" aria-labelledby="projects-title">
+    <header class="section-heading projects__heading">
+      <div class="page-shell">
+        <p data-reveal class="eyebrow">Inspiración real</p>
+      </div>
+      <div class="section-banner section-banner--olive" data-reveal>
+        <img src="/media/wireframes/texture-paper.jpg" alt="" aria-hidden="true" />
+        <div class="page-shell section-banner__inner">
+          <h2 id="projects-title">Expertos en contar historias <em>a través de los detalles...</em></h2>
+          <img class="section-banner__mark" src="/brand/eventosa-isotype-olive.png" alt="" aria-hidden="true" />
         </div>
-        <p data-reveal class="section-heading__copy">
-          Una selección de ambientes, mesas, flores y detalles creados para celebraciones distintas.
-        </p>
-      </header>
-
-      <div class="projects__grid">
-        <article v-for="project in projects" :key="project.label" data-reveal :class="['project-item', project.className]">
-          <ImagePlaceholder
-            :label="project.label"
-            :dimensions="project.dimensions"
-            :description="project.description"
-            :ratio="project.ratio"
-            :tone="project.tone"
-          />
+      </div>
+    </header>
+    <div class="page-shell">
+      <div ref="galleryTrack" class="projects__grid" tabindex="0" aria-label="Galería de inspiración">
+        <article v-for="project in projects.slice(0, 4)" :key="project.label" data-reveal :class="['project-item', project.className]">
+          <figure class="project-item__figure">
+            <img
+              :src="project.src"
+              :alt="project.alt"
+              :width="project.ratio === '3/2' ? 1800 : 1200"
+              :height="project.ratio === '3/2' ? 1200 : 1500"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>{{ project.label }}</span>
+              <small>{{ project.dimensions }} · {{ project.description }}</small>
+            </figcaption>
+          </figure>
         </article>
+      </div>
+
+      <div class="projects__controls projects__controls--overlay" data-reveal>
+        <button type="button" aria-label="Ver imágenes anteriores" @click="scrollGallery(-1)">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" /></svg>
+        </button>
+        <button type="button" aria-label="Ver imágenes siguientes" @click="scrollGallery(1)">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6" /></svg>
+        </button>
       </div>
 
       <a
@@ -42,7 +63,7 @@ useSectionReveal(root)
         rel="noopener noreferrer"
       >
         <span>Ver más en Instagram</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></svg>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
       </a>
     </div>
   </section>

@@ -8,11 +8,11 @@ import WhatsAppButton from './WhatsAppButton.vue'
 gsap.registerPlugin(ScrollTrigger)
 
 const navItems = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Proyectos', href: '#proyectos' },
   { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Servicios', href: '#servicios' },
+  { label: 'Galería', href: '#galeria' },
+  { label: 'Flower Lab', href: '#flower-lab' },
+  { label: 'Contacto', href: '#visitanos' },
 ]
 
 const isScrolled = ref(false)
@@ -21,9 +21,7 @@ const dialog = ref<HTMLDialogElement | null>(null)
 const menuButton = ref<HTMLButtonElement | null>(null)
 let headerTrigger: ScrollTrigger | undefined
 
-const logoSource = computed(() =>
-  isScrolled.value ? '/brand/eventosa-horizontal-olive.png' : '/brand/eventosa-horizontal-white.png',
-)
+const logoSource = computed(() => '/brand/eventosa-horizontal-olive.png')
 
 onMounted(() => {
   headerTrigger = ScrollTrigger.create({
@@ -127,7 +125,7 @@ function handleDialogClose() {
       </nav>
       <div class="mobile-menu__footer">
         <a :href="siteConfig.instagramUrl" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <WhatsAppButton label="Platiquemos" variant="solid" />
+        <WhatsAppButton label="Platiquemos por WhatsApp" variant="solid" />
       </div>
     </dialog>
   </header>

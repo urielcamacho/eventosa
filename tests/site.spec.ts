@@ -5,8 +5,9 @@ import { describe, expect, it } from 'vitest'
 import AppHeader from '../src/components/AppHeader.vue'
 import ImagePlaceholder from '../src/components/ImagePlaceholder.vue'
 import WhatsAppButton from '../src/components/WhatsAppButton.vue'
+import BrandCanvas from '../src/components/webgl/BrandCanvas.vue'
 import { getWhatsAppUrl, siteConfig } from '../src/config/site'
-import { processSteps, projects, services } from '../src/data/content'
+import { flowerLabItems, processSteps, projects, serviceHighlights, services } from '../src/data/content'
 
 describe('site configuration', () => {
   it('uses only the verified contact destinations', () => {
@@ -27,17 +28,35 @@ describe('site configuration', () => {
     expect(projects).toHaveLength(5)
     expect(processSteps).toHaveLength(3)
   })
+
+  it('makes every service WhatsApp destination explicit', () => {
+    expect(services.every(({ linkLabel }) => linkLabel.includes('WhatsApp'))).toBe(true)
+  })
+
+  it('keeps the wireframe sections and contact decision explicit', () => {
+    expect(siteConfig.address).toBe('Federal a Atlixco no. 3002, Puebla, Pue.')
+    expect(serviceHighlights.map(({ title }) => title)).toEqual([
+      'Domos y carpas.',
+      'Mobiliario.',
+      'Tablesetting.',
+      'Mantelería.',
+      'Kids.',
+      'Florería.',
+    ])
+    expect(flowerLabItems).toHaveLength(6)
+  })
 })
 
 describe('reusable conversion and media components', () => {
   it('renders a service-specific WhatsApp link', () => {
     const wrapper = mount(WhatsAppButton, {
-      props: { label: 'Explorar rentals', messageKey: 'rentals' },
+      props: { label: 'Consultar rentals por WhatsApp', messageKey: 'rentals' },
     })
 
     expect(wrapper.attributes('href')).toContain('wa.me/522212200402')
     expect(wrapper.attributes('href')).toContain('Rentals')
     expect(wrapper.attributes('target')).toBe('_blank')
+    expect(wrapper.text()).toContain('WhatsApp')
   })
 
   it('describes placeholders accessibly and preserves their ratio', () => {
@@ -53,6 +72,26 @@ describe('reusable conversion and media components', () => {
     expect(wrapper.attributes('role')).toBe('img')
     expect(wrapper.attributes('aria-label')).toContain('1800 × 1200 px')
     expect(wrapper.attributes('style')).toContain('aspect-ratio: 3/2')
+  })
+
+  it('keeps WebGL canvases decorative and exposes a static fallback state', () => {
+    const wrapper = mount(BrandCanvas, { props: { variant: 'hero' } })
+
+    expect(wrapper.attributes('aria-hidden')).toBe('true')
+    expect(wrapper.classes()).toContain('brand-canvas--hero')
+    expect(['idle', 'fallback']).toContain(wrapper.attributes('data-webgl-state'))
+    wrapper.unmount()
+  })
+})
+
+describe('accessible brand colors', () => {
+  it('provides an AA olive token for functional text and controls', () => {
+    const css = readFileSync(resolve(process.cwd(), 'src/style.css'), 'utf8')
+    const token = css.match(/--color-brand-olive-accessible:\s*(#[0-9a-f]{6})/i)?.[1]
+
+    expect(token).toBe('#6f6835')
+    expect(contrastRatio(token!, '#ffffff')).toBeGreaterThanOrEqual(4.5)
+    expect(contrastRatio(token!, '#f2f1ef')).toBeGreaterThanOrEqual(4.5)
   })
 })
 
@@ -70,6 +109,22 @@ describe('navigation', () => {
     wrapper.unmount()
   })
 })
+
+function contrastRatio(first: string, second: string) {
+  const firstLuminance = relativeLuminance(first)
+  const secondLuminance = relativeLuminance(second)
+
+  return (Math.max(firstLuminance, secondLuminance) + 0.05) / (Math.min(firstLuminance, secondLuminance) + 0.05)
+}
+
+function relativeLuminance(hex: string) {
+  const channels = [1, 3, 5].map((index) => Number.parseInt(hex.slice(index, index + 2), 16) / 255)
+  const linear = channels.map((channel) =>
+    channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4,
+  )
+
+  return linear[0]! * 0.2126 + linear[1]! * 0.7152 + linear[2]! * 0.0722
+}
 
 describe('static metadata and legal route', () => {
   it('publishes LocalBusiness metadata without ecommerce markup', () => {
