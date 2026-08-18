@@ -3876,3 +3876,63 @@ em {
 .visit-section__eyebrow .eyebrow {
   font-weight: 500;
 }
+
+/* Final mobile pass: keep the editorial rhythm compact and prevent banner marks from covering text. */
+@media (max-width: 767px) {
+  .hero-about-divider {
+    padding-top: 1.5rem;
+  }
+
+  .about {
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .services {
+    padding-top: 1.75rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .projects {
+    padding-top: 1rem;
+  }
+
+  .flower-lab {
+    padding-top: 1rem;
+  }
+
+  .visit-section {
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .site-footer {
+    padding-top: 2.5rem;
+  }
+
+  .section-heading.services__heading,
+  .section-heading.projects__heading {
+    margin-bottom: 1rem;
+  }
+
+  .services__grid--wireframe .service-item {
+    min-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .section-banner__services .section-banner__inner > p {
+    max-width: calc(100% - 5rem);
+  }
+
+  .section-banner--olive h2 {
+    max-width: calc(100% - 6rem);
+  }
+
+  .section-banner--olive .section-banner__mark {
+    width: 3.5rem;
+  }
+
+  .section-banner__inner .section-banner__mark {
+    right: 1.25rem;
+  }
+}
