@@ -9,6 +9,7 @@ import ProjectsSection from './components/ProjectsSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import WhatsAppButton from './components/WhatsAppButton.vue'
 import VisitSection from './components/VisitSection.vue'
+import { assetUrl } from './config/assets'
 </script>
 
 <template>
@@ -16,6 +17,9 @@ import VisitSection from './components/VisitSection.vue'
   <AppHeader />
   <main id="contenido">
     <HeroSection />
+    <div class="hero-about-divider" aria-hidden="true">
+      <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" />
+    </div>
     <AboutSection />
     <ServicesSection />
     <ProjectsSection />

@@ -42,15 +42,13 @@ function scrollServices(direction: number) {
               <span class="service-item__dimensions">{{ service.dimensions }}</span>
             </div>
             <div class="service-item__content">
-              <div class="service-item__index">
-                <span>{{ service.name }}</span>
-                <span>{{ service.number }}</span>
-              </div>
               <div class="service-item__title-row">
-                <h3>{{ service.title }}</h3>
+                <div class="service-item__copy">
+                  <h3>{{ service.title }}</h3>
+                  <p>{{ service.quote }}</p>
+                </div>
                 <ServiceIcon :icon="service.icon" />
               </div>
-              <p>{{ service.quote }}</p>
             </div>
           </article>
         </div>
@@ -61,7 +59,7 @@ function scrollServices(direction: number) {
       </div>
 
       <div class="services__catalog" data-reveal>
-        <WhatsAppButton label="Catálogo digital" message-key="catalog" variant="light" />
+        <WhatsAppButton label="Catálogo Digital" message-key="catalog" variant="light" />
       </div>
     </div>
   </section>

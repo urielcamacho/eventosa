@@ -28,13 +28,15 @@ onMounted(() => {
         gsap.set(line, { strokeDasharray: length, strokeDashoffset: length })
       })
 
-      gsap.to(lines as gsap.TweenTarget, {
-        strokeDashoffset: 0,
-        duration: 1.6,
-        stagger: 0.16,
-        delay: props.variant === 'hero' ? 1.35 : 0.2,
-        ease: 'power2.out',
-      })
+      if (lines.length > 0) {
+        gsap.to(lines as gsap.TweenTarget, {
+          strokeDashoffset: 0,
+          duration: 1.6,
+          stagger: 0.16,
+          delay: props.variant === 'hero' ? 1.35 : 0.2,
+          ease: 'power2.out',
+        })
+      }
 
       sparks.forEach((spark, index) => {
         gsap.fromTo(

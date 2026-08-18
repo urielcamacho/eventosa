@@ -85,4 +85,10 @@ onBeforeUnmount(() => {
       </div>
     </div>
   </section>
+  <div class="hero-location-band" aria-label="Ubicación">
+    <div class="page-shell">
+      <span>Puebla, México</span>
+      <span aria-hidden="true">↓</span>
+    </div>
+  </div>
 </template>

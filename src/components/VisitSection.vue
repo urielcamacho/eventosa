@@ -12,6 +12,9 @@ useSectionReveal(root)
 
 <template>
   <section id="visitanos" ref="root" class="visit-section section" aria-labelledby="visit-title">
+    <div class="page-shell visit-section__eyebrow" data-reveal>
+      <p class="eyebrow">Visítanos</p>
+    </div>
     <header class="section-banner" data-reveal>
       <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" aria-hidden="true" />
       <div class="page-shell section-banner__inner">
@@ -33,7 +36,6 @@ useSectionReveal(root)
         </div>
 
         <address class="visit-section__address" data-reveal>
-          <p class="eyebrow">Visítanos</p>
           <h2>Federal a Atlixco <em>no. 3002</em></h2>
           <p>{{ siteConfig.address }}</p>
           <a class="visit-section__contact" :href="siteConfig.instagramUrl" target="_blank" rel="noopener noreferrer">

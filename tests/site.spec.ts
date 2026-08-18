@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import AppHeader from '../src/components/AppHeader.vue'
@@ -47,7 +47,19 @@ describe('site configuration', () => {
       'Kids.',
       'Florería.',
     ])
+    expect(serviceHighlights.map(({ icon }) => icon)).toEqual([
+      'tent',
+      'chair',
+      'glass',
+      'tablecloth',
+      'kids',
+      'flower',
+    ])
     expect(flowerLabItems).toHaveLength(6)
+  })
+
+  it('ships the official Flower Lab medallion extracted from the identity manual', () => {
+    expect(existsSync(resolve(process.cwd(), 'public/media/wireframes/icons/flower-lab.png'))).toBe(true)
   })
 })
 
@@ -139,10 +151,12 @@ describe('static metadata and legal route', () => {
     expect(html.toLowerCase()).not.toContain('checkout')
   })
 
-  it('keeps the legal page explicitly pending validation', () => {
+  it('publishes the privacy notice for the site\'s actual data flows', () => {
     const app = readFileSync(resolve(process.cwd(), 'src/PrivacyApp.vue'), 'utf8')
-    expect(app).toContain('Contenido pendiente de validación legal.')
-    expect(app).toContain('No se presentan cláusulas provisionales')
+    expect(app).toContain('Este sitio no tiene formularios, cuentas de usuario ni campos para capturar información personal.')
+    expect(app).toContain('no incrusta cookies de terceros, píxeles, herramientas de analítica')
+    expect(app).toContain('Derechos ARCO y revocación')
+    expect(app).toContain('https://wa.me/522212200402')
   })
 
   it('implements the reduced-motion contract in CSS and GSAP components', () => {

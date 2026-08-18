@@ -63,7 +63,7 @@ const flowerBottomRight = flowerLabItems[5]!
       </div>
 
       <div class="flower-lab__cta" data-reveal>
-        <WhatsAppButton label="Solicitar catálogo por WhatsApp" message-key="flowers" variant="light" />
+        <WhatsAppButton label="Catálogo digital" message-key="flowers" variant="light" />
       </div>
     </div>
   </section>

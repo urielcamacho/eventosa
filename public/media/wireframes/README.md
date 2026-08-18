@@ -15,3 +15,7 @@ These JPEGs were extracted from the supplied Eventosa wireframe PDF using Popple
 | `gallery-detail-small-2.jpg`    |                     041 | Gallery detail           |
 | `flower-01.jpg`–`flower-05.jpg` | 000, 001, 002, 003, 005 | Flower Lab mosaic        |
 | `texture-paper.jpg`             |                     033 | Section banner texture   |
+
+The six circular assets in `icons/` were cropped from the approved artwork supplied for the “Lo que hacemos” carousel: chair, tent, glass, tablecloth, kids and flower.
+
+`icons/flower-lab.png` is the official yellow Flower Lab medallion extracted from page 6 of the supplied `APLICACIONES.pdf` identity manual.

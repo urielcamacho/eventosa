@@ -31,7 +31,7 @@ export interface ServiceHighlight {
   name: string
   title: string
   quote: string
-  icon: 'tent' | 'chair' | 'glass'
+  icon: 'tent' | 'chair' | 'glass' | 'tablecloth' | 'kids' | 'flower'
   dimensions: string
   src: string
   alt: string
@@ -126,7 +126,7 @@ export const serviceHighlights: ServiceHighlight[] = [
     name: 'Rentals',
     title: 'Mantelería.',
     quote: '“Creemos en el poder del detalle para contar historias.”',
-    icon: 'tent',
+    icon: 'tablecloth',
     dimensions: '1200 × 1500 · 4:5',
     src: assetUrl('/media/wireframes/gallery-detail-small-2.jpg'),
     alt: 'Textiles y mantelería preparados para un montaje.',
@@ -137,7 +137,7 @@ export const serviceHighlights: ServiceHighlight[] = [
     name: 'Design',
     title: 'Kids.',
     quote: '“Lo que hoy se vive, mañana se atesora.”',
-    icon: 'chair',
+    icon: 'kids',
     dimensions: '1200 × 1500 · 4:5',
     src: assetUrl('/media/wireframes/flower-05.jpg'),
     alt: 'Detalle colorido para una celebración infantil.',
@@ -148,7 +148,7 @@ export const serviceHighlights: ServiceHighlight[] = [
     name: 'Flowers',
     title: 'Florería.',
     quote: '“Donde el detalle florece, el evento cobra vida.”',
-    icon: 'glass',
+    icon: 'flower',
     dimensions: '1200 × 1500 · 4:5',
     src: assetUrl('/media/wireframes/flower-03.jpg'),
     alt: 'Composición floral con presencia y color.',

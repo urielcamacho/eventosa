@@ -79,24 +79,24 @@ function handleDialogClose() {
       <img :src="logoSource" alt="Eventosa — Rentals, Design, Flowers desde 2005" width="1327" height="596" />
     </a>
 
-    <nav class="desktop-nav" aria-label="Navegación principal">
-      <a v-for="item in navItems" :key="item.href" :href="item.href">{{ item.label }}</a>
-    </nav>
-
-    <div class="site-header__actions">
+    <div class="site-header__desktop">
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a v-for="item in navItems" :key="item.href" :href="item.href">{{ item.label }}</a>
+      </nav>
       <WhatsAppButton label="WhatsApp" variant="outline" />
-      <button
-        ref="menuButton"
-        class="menu-toggle"
-        type="button"
-        :aria-expanded="menuOpen"
-        aria-controls="mobile-menu"
-        aria-label="Abrir menú"
-        @click="openMenu"
-      >
-        <span></span><span></span>
-      </button>
     </div>
+
+    <button
+      ref="menuButton"
+      class="menu-toggle"
+      type="button"
+      :aria-expanded="menuOpen"
+      aria-controls="mobile-menu"
+      aria-label="Abrir menú"
+      @click="openMenu"
+    >
+      <span></span><span></span>
+    </button>
 
     <dialog
       id="mobile-menu"
