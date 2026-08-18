@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { serviceHighlights } from '../data/content'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import ServiceIcon from './ServiceIcon.vue'
+import WhatsAppButton from './WhatsAppButton.vue'
 import { assetUrl } from '../config/assets'
 
 const root = ref<HTMLElement | null>(null)
@@ -57,6 +58,10 @@ function scrollServices(direction: number) {
         <button type="button" class="services__control services__control--next" aria-label="Ver servicios siguientes" @click="scrollServices(1)">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6" /></svg>
         </button>
+      </div>
+
+      <div class="services__catalog" data-reveal>
+        <WhatsAppButton label="Catálogo digital" message-key="catalog" variant="light" />
       </div>
     </div>
   </section>

@@ -7,9 +7,9 @@ const props = defineProps<{
 }>()
 
 const iconSrc: Record<ServiceHighlight['icon'], string> = {
-  tent: assetUrl('/media/wireframes/icons/tent.png'),
-  chair: assetUrl('/media/wireframes/icons/chair.png'),
-  glass: assetUrl('/media/wireframes/icons/glass.png'),
+  tent: assetUrl('/media/wireframes/500x500.svg'),
+  chair: assetUrl('/media/wireframes/500x500.svg'),
+  glass: assetUrl('/media/wireframes/500x500.svg'),
 }
 </script>
 

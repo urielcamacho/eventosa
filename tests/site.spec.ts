@@ -23,6 +23,10 @@ describe('site configuration', () => {
     )
   })
 
+  it('provides a specific destination for the digital catalog', () => {
+    expect(getWhatsAppUrl('catalog')).toContain('cat%C3%A1logo%20digital%20de%20Eventosa')
+  })
+
   it('defines all required editorial content groups', () => {
     expect(services.map(({ name }) => name)).toEqual(['Rentals', 'Design', 'Flowers'])
     expect(projects).toHaveLength(5)

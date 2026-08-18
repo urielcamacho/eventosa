@@ -12,6 +12,7 @@ export const siteConfig = {
     rentals: 'Hola, me gustaría recibir información sobre Rentals para mi evento.',
     design: 'Hola, me gustaría recibir información sobre Design para mi evento.',
     flowers: 'Hola, me gustaría recibir información sobre Flowers para mi evento.',
+    catalog: 'Hola, me gustaría recibir el catálogo digital de Eventosa.',
   },
 } as const
 
