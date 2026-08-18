@@ -105,7 +105,7 @@ em {
   color: var(--color-text-dark);
 }
 
-:focus-visible {
+:focus-visible:not(a) {
   outline: 2px solid var(--color-brand-olive-accessible);
   outline-offset: 4px;
 }
