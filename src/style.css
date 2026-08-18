@@ -3012,20 +3012,52 @@ em {
   .services__control--next { right: -0.7rem; }
 
   .projects__grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    gap: 0.65rem;
+    overflow: visible;
+    scroll-snap-type: none;
   }
 
   .projects__grid .project-item {
-    min-width: 82vw;
+    min-width: 0;
     margin: 0;
-    scroll-snap-align: start;
+    scroll-snap-align: none;
   }
 
   .projects__grid .project-item__figure {
-    min-height: 23rem;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Keep the complete project composition together on mobile. */
+  .projects__grid .project--main {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .projects__grid .project--floral {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .projects__grid .project--table {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .projects__grid .project--furniture {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  .projects__grid .project--main .project-item__figure {
+    aspect-ratio: 16 / 9;
+  }
+
+  .projects__controls--overlay {
+    display: none;
   }
 
   .flower-lab__grid {
@@ -3388,11 +3420,12 @@ em {
 
 @media (max-width: 767px) {
   .services {
+    padding-top: 1.75rem;
     padding-bottom: 2.5rem;
   }
 
   .services__catalog {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
   }
 
   .services__catalog .whatsapp-button {
@@ -3403,7 +3436,16 @@ em {
   .projects,
   .flower-lab,
   .visit-section {
-    padding-top: 2.25rem;
+    padding-top: 1.25rem;
+  }
+
+  .about {
+    padding-block: 2.5rem 1.75rem;
+  }
+
+  .projects__heading,
+  .section-heading.services__heading {
+    margin-bottom: 1.25rem;
   }
 
   .projects,
@@ -3411,9 +3453,21 @@ em {
     padding-bottom: 0;
   }
 
+  .section-banner--flower {
+    margin-bottom: 1.25rem;
+  }
+
+  .projects .text-link {
+    margin-top: 1.25rem;
+  }
+
+  .flower-lab__grid {
+    margin-top: 1rem;
+  }
+
   .projects::after,
   .flower-lab::after {
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
   }
 }
 
