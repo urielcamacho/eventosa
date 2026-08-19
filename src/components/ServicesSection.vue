@@ -39,7 +39,6 @@ function scrollServices(direction: number) {
           <article v-for="service in serviceHighlights" :key="service.title" data-reveal class="service-item">
             <div class="service-item__media">
               <img :src="service.src" :alt="service.alt" width="1200" height="1500" loading="lazy" />
-              <span class="service-item__dimensions">{{ service.dimensions }}</span>
             </div>
             <div class="service-item__content">
               <div class="service-item__title-row">

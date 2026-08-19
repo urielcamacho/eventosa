@@ -33,31 +33,25 @@ const flowerBottomRight = flowerLabItems[5]!
         <div class="flower-lab__column flower-lab__column--left">
           <figure :class="['flower-lab__item', flowerTopLeft.className]" data-reveal>
             <img :src="flowerTopLeft.src" :alt="flowerTopLeft.alt" loading="lazy" />
-            <figcaption class="flower-lab__dimensions">{{ flowerTopLeft.dimensions }}</figcaption>
           </figure>
           <div class="flower-lab__pair">
             <figure :class="['flower-lab__item', flowerMiddleLeft.className]" data-reveal>
               <img :src="flowerMiddleLeft.src" :alt="flowerMiddleLeft.alt" loading="lazy" />
-              <figcaption class="flower-lab__dimensions">{{ flowerMiddleLeft.dimensions }}</figcaption>
             </figure>
             <figure :class="['flower-lab__item', flowerMiddleRight.className]" data-reveal>
               <img :src="flowerMiddleRight.src" :alt="flowerMiddleRight.alt" loading="lazy" />
-              <figcaption class="flower-lab__dimensions">{{ flowerMiddleRight.dimensions }}</figcaption>
             </figure>
           </div>
           <figure :class="['flower-lab__item', flowerBottomLeft.className]" data-reveal>
             <img :src="flowerBottomLeft.src" :alt="flowerBottomLeft.alt" loading="lazy" />
-            <figcaption class="flower-lab__dimensions">{{ flowerBottomLeft.dimensions }}</figcaption>
           </figure>
         </div>
         <div class="flower-lab__column flower-lab__column--right">
           <figure :class="['flower-lab__item', flowerTopRight.className]" data-reveal>
             <img :src="flowerTopRight.src" :alt="flowerTopRight.alt" loading="lazy" />
-            <figcaption class="flower-lab__dimensions">{{ flowerTopRight.dimensions }}</figcaption>
           </figure>
           <figure :class="['flower-lab__item', flowerBottomRight.className]" data-reveal>
             <img :src="flowerBottomRight.src" :alt="flowerBottomRight.alt" loading="lazy" />
-            <figcaption class="flower-lab__dimensions">{{ flowerBottomRight.dimensions }}</figcaption>
           </figure>
         </div>
       </div>

@@ -41,7 +41,7 @@ function scrollGallery(direction: number) {
             />
             <figcaption>
               <span>{{ project.label }}</span>
-              <small>{{ project.dimensions }} · {{ project.description }}</small>
+              <small>{{ project.description }}</small>
             </figcaption>
           </figure>
         </article>

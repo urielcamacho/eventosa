@@ -2609,19 +2609,6 @@ em {
   object-fit: cover;
 }
 
-.service-item__dimensions {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  padding: 0.4rem 0.6rem;
-  background: rgb(255 255 255 / 88%);
-  color: var(--color-brand-olive-accessible);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
 .services__grid--wireframe .service-item__index {
   padding-bottom: 0.5rem;
 }
@@ -3390,21 +3377,6 @@ em {
   position: relative;
 }
 
-.flower-lab__dimensions {
-  position: absolute;
-  right: 0.8rem;
-  bottom: 0.8rem;
-  margin: 0;
-  padding: 0.35rem 0.55rem;
-  background: rgb(255 255 255 / 88%);
-  color: var(--color-brand-olive-accessible);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
 @media (max-width: 767px) {
   .section-banner--flower > div {
     max-width: calc(100% - 6.5rem);
@@ -3418,12 +3390,6 @@ em {
     width: 5.5rem;
   }
 
-  .flower-lab__dimensions {
-    right: 0.5rem;
-    bottom: 0.5rem;
-    padding: 0.3rem 0.4rem;
-    font-size: 0.5rem;
-  }
 }
 
 /* Thin full-bleed separator before the Visítanos section, as shown in the PDF. */
