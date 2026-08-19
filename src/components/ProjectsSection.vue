@@ -23,7 +23,7 @@ function scrollGallery(direction: number) {
       <div class="section-banner section-banner--olive" data-reveal>
         <img :src="assetUrl('/media/wireframes/texture-paper.jpg')" alt="" aria-hidden="true" />
         <div class="page-shell section-banner__inner">
-          <h2 id="projects-title">Expertos en contar historias <em>a través de los detalles...</em></h2>
+          <h2 id="projects-title">Expertos en contar historias a través de los detalles...</h2>
           <img class="section-banner__mark" :src="assetUrl('/brand/eventosa-isotype-olive.png')" alt="" aria-hidden="true" />
         </div>
       </div>

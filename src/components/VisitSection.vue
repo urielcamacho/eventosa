@@ -57,7 +57,7 @@ useSectionReveal(root)
       <div class="visit-section__cta" data-reveal>
         <BrandCanvas variant="cta" />
         <p>Creamos instantes que se transforman en algo más grande: <em>lo inolvidable...</em></p>
-        <WhatsAppButton label="Platiquemos por WhatsApp" variant="light" />
+        <WhatsAppButton label="WhatsApp" variant="light" />
       </div>
     </div>
   </section>

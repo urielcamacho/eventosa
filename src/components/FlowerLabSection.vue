@@ -23,7 +23,7 @@ const flowerBottomRight = flowerLabItems[5]!
       <div class="page-shell section-banner__inner">
         <div>
           <p class="eyebrow">Flower Lab</p>
-          <h2 id="flower-lab-title">Las flores son lenguaje, <em>comunican lo que no se dice.</em></h2>
+          <h2 id="flower-lab-title"><em>Las flores son lenguaje, comunican lo que no se dice.</em></h2>
         </div>
         <img class="section-banner__mark" :src="assetUrl('/media/wireframes/icons/flower-lab.jpg')" alt="" aria-hidden="true" />
       </div>

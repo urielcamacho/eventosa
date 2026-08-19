@@ -1,27 +1,67 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Manrope Variable";
+  font-family: "Manrope";
   font-style: normal;
   font-display: swap;
-  font-weight: 200 800;
-  src: url("./assets/fonts/manrope-latin-variable.woff2") format("woff2-variations");
+  font-weight: 200;
+  src: url("./assets/fonts/manrope-extralight.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Cormorant Garamond Variable";
+  font-family: "Manrope";
   font-style: normal;
   font-display: swap;
-  font-weight: 300 700;
-  src: url("./assets/fonts/cormorant-garamond-latin-variable.woff2") format("woff2-variations");
+  font-weight: 300;
+  src: url("./assets/fonts/manrope-light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Cormorant Garamond Variable";
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("./assets/fonts/manrope-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("./assets/fonts/manrope-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("./assets/fonts/manrope-semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("./assets/fonts/manrope-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url("./assets/fonts/manrope-extrabold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
   font-style: italic;
   font-display: swap;
-  font-weight: 300 700;
-  src: url("./assets/fonts/cormorant-garamond-latin-variable-italic.woff2") format("woff2-variations");
+  font-weight: 200;
+  src: url("./assets/fonts/pp-editorial-new-ultralight-italic.otf") format("opentype");
 }
 
 @theme {
@@ -33,8 +73,8 @@
   --color-brand-olive-accessible: #6f6835;
   --color-pure-white: #ffffff;
   --color-text-dark: #22211c;
-  --font-serif: "Cormorant Garamond Variable", "Times New Roman", serif;
-  --font-sans: "Manrope Variable", Arial, sans-serif;
+  --font-editorial: "PP Editorial New", "Times New Roman", serif;
+  --font-sans: "Manrope", Arial, sans-serif;
 }
 
 :root {
@@ -145,7 +185,7 @@ em {
 .final-cta h2 {
   margin: 0;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(3.25rem, 7.1vw, 7.4rem);
   font-weight: 300;
   letter-spacing: -0.052em;
@@ -465,7 +505,7 @@ em {
 }
 
 .mobile-nav__link span {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(2.3rem, 11vw, 4.5rem);
   line-height: 1;
 }
@@ -632,7 +672,7 @@ em {
 
 .hero__title em {
   color: var(--color-pure-white);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   display: inline-block;
   font-size: 1.24em;
   font-style: italic;
@@ -886,7 +926,7 @@ em {
 .service-item h3 {
   max-width: 23rem;
   margin: 1.5rem 0 0.85rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(2rem, 3vw, 3.15rem);
   font-weight: 480;
   letter-spacing: -0.035em;
@@ -995,7 +1035,7 @@ em {
 .about blockquote {
   margin: 2.5rem 0 0;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   font-style: italic;
   line-height: 1.05;
@@ -1030,7 +1070,7 @@ em {
 
 .process__steps h3 {
   margin: 3rem 0 0.8rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 480;
   letter-spacing: -0.035em;
@@ -1105,7 +1145,7 @@ em {
 .site-footer__signature {
   margin: 0;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.6rem, 3.2vw, 3rem);
   font-style: italic;
 }
@@ -1164,7 +1204,7 @@ em {
   max-width: 46rem;
   margin: 0;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(3.7rem, 8vw, 7rem);
   font-weight: 470;
   letter-spacing: -0.05em;
@@ -1174,7 +1214,7 @@ em {
 .privacy-page__lead {
   margin: 2rem 0 0.75rem;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-style: italic;
 }
@@ -1192,7 +1232,7 @@ em {
 .privacy-page__sections h2 {
   margin: 0 0 0.65rem;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 470;
   letter-spacing: -0.025em;
@@ -2269,7 +2309,7 @@ em {
 }
 
 .section-banner--olive h2 em {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 300;
 }
 
@@ -2323,7 +2363,7 @@ em {
 .section-banner--flower h2 {
   margin: 0;
   color: var(--color-pure-white);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.75rem, 3vw, 3rem);
   font-weight: 300;
   line-height: 1;
@@ -2476,7 +2516,7 @@ em {
 }
 
 .section-banner h2 em {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 300;
 }
@@ -2494,7 +2534,7 @@ em {
 }
 
 .section-banner--flower h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-weight: 300;
 }
@@ -2593,7 +2633,7 @@ em {
 .services__grid--wireframe .service-item p {
   min-height: 3.2rem;
   margin-bottom: 1.2rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.1rem;
   font-style: italic;
   line-height: 1.12;
@@ -2686,7 +2726,7 @@ em {
 }
 
 .project-item__figure figcaption span {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.5rem;
 }
 
@@ -2893,7 +2933,7 @@ em {
   max-width: 35rem;
   margin: 0;
   color: var(--color-brand-olive-accessible);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 300;
   letter-spacing: -0.05em;
@@ -2942,13 +2982,59 @@ em {
 .visit-section__cta p {
   max-width: 50rem;
   margin: 0;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(2rem, 4vw, 4rem);
   line-height: 0.98;
 }
 
 .visit-section__cta em {
   color: var(--color-brand-yellow);
+}
+
+/* Visit block follows the PDF's Manrope-only contact and CTA treatment. */
+.visit-section__address h2,
+.visit-section__address h2 em {
+  color: var(--color-text-dark);
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.visit-section__address h2 {
+  font-size: clamp(2.7rem, 3.8vw, 4rem);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.visit-section__cta {
+  gap: 1rem;
+  padding: clamp(2.25rem, 4vw, 4rem) 1.5rem;
+}
+
+.visit-section__cta p,
+.visit-section__cta em {
+  max-width: 82rem;
+  color: var(--color-pure-white);
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.02;
+}
+
+.visit-section__cta p {
+  font-size: clamp(2.2rem, 3.8vw, 4rem);
+}
+
+@media (min-width: 768px) {
+  .visit-section__contact {
+    font-size: clamp(1.35rem, 2.45vw, 2.75rem);
+  }
+
+  .visit-section__contact svg {
+    flex-basis: clamp(1.65rem, 2.35vw, 2.5rem);
+    width: clamp(1.65rem, 2.35vw, 2.5rem);
+    height: clamp(1.65rem, 2.35vw, 2.5rem);
+  }
 }
 
 @media (min-width: 768px) {
@@ -3193,7 +3279,7 @@ em {
   min-height: 0;
   margin: 0;
   color: var(--color-brand-olive);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(1.2rem, 1.35vw, 1.45rem);
   font-style: italic;
   font-weight: 700;
@@ -3502,6 +3588,23 @@ em {
 .visit-section__cta .whatsapp-button--light {
   background: var(--color-brand-yellow);
   color: var(--color-text-dark);
+}
+
+@media (min-width: 768px) {
+  .visit-section__cta .whatsapp-button--light {
+    min-width: 18rem;
+    min-height: 4.75rem;
+    padding: 1rem 2rem;
+    color: var(--color-brand-olive-accessible);
+    font-size: clamp(1.35rem, 2vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .visit-section__cta .whatsapp-button--light svg {
+    display: none;
+  }
 }
 
 .visit-section__cta > .brand-canvas--cta {
@@ -4053,4 +4156,55 @@ em {
 .section-banner--flower h2 em {
   font-family: inherit;
   font-style: inherit;
+}
+
+/* PP Editorial New is reserved for intentional editorial emphasis. */
+.hero__title em,
+.section-heading h2 em,
+.about h2 em,
+.final-cta h2 em,
+.about blockquote,
+.site-footer__signature,
+.privacy-page__lead,
+.services__grid--wireframe .service-item p,
+.section-banner--olive h2 em,
+.section-banner h2 em,
+.visit-section__address h2 em,
+.visit-section__cta em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 200;
+}
+
+/* The Visítanos layout intentionally keeps its contact card and CTA in Manrope. */
+.visit-section__address h2 em,
+.visit-section__cta em {
+  color: inherit;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+
+@media (min-width: 768px) {
+  .visit-section__address h2,
+  .visit-section__address h2 em {
+    max-width: 29rem;
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    font-size: clamp(2.7rem, 3.8vw, 4rem);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 0.98;
+  }
+
+  .visit-section__contact {
+    font-size: clamp(1.35rem, 2.45vw, 2.75rem);
+  }
+
+  .visit-section__contact svg {
+    flex-basis: clamp(1.65rem, 2.35vw, 2.5rem);
+    width: clamp(1.65rem, 2.35vw, 2.5rem);
+    height: clamp(1.65rem, 2.35vw, 2.5rem);
+  }
 }
