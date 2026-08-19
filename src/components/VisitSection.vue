@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { siteConfig } from '../config/site'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import WhatsAppButton from './WhatsAppButton.vue'
-import BrandCanvas from './webgl/BrandCanvas.vue'
+import SparkleCluster from './SparkleCluster.vue'
 import { assetUrl } from '../config/assets'
 
 const root = ref<HTMLElement | null>(null)
@@ -55,8 +55,10 @@ useSectionReveal(root)
       </div>
 
       <div class="visit-section__cta" data-reveal>
-        <BrandCanvas variant="cta" />
-        <p>Creamos instantes que se transforman en algo más grande: <em>lo inolvidable...</em></p>
+        <p>
+          <span class="visit-section__cta-line"><SparkleCluster class="visit-section__cta-sparkle visit-section__cta-sparkle--lead" />Creamos instantes que se transforman en</span>
+          <span class="visit-section__cta-line">algo más grande: <em>lo inolvidable...</em><SparkleCluster class="visit-section__cta-sparkle visit-section__cta-sparkle--tail" /></span>
+        </p>
         <WhatsAppButton label="WhatsApp" variant="light" />
       </div>
     </div>

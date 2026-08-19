@@ -2039,6 +2039,112 @@ em {
   inset: 0;
 }
 
+/* PDF sparkle motif: each pair travels with its related copy, never as a page layer. */
+.sparkle-cluster {
+  display: inline-flex;
+  width: 1.12em;
+  vertical-align: -0.16em;
+  color: currentColor;
+  line-height: 0;
+}
+
+.sparkle-cluster svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.sparkle-cluster__large,
+.sparkle-cluster__medium,
+.sparkle-cluster__small {
+  fill: currentColor;
+}
+
+.hero__sparkle {
+  margin-inline: 0.12em;
+}
+
+.hero__sparkle--lead {
+  margin-left: 0;
+  margin-right: -1.25em;
+  transform: translate(-1.25em, -0.09em);
+}
+
+.hero__sparkle--tail {
+  margin-right: 0;
+  transform: translateY(-0.08em);
+}
+
+/* The first sparkle deliberately projects left of the copy, as in the hero artwork. */
+.hero__line-mask:first-child {
+  margin-left: -1.25em;
+  padding-left: 1.25em;
+}
+
+@media (max-width: 767px) {
+  .hero__line-mask:first-child {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .hero__sparkle--lead {
+    display: flex;
+    width: 0.9em;
+    margin: 0 0 -0.08em;
+    transform: translateY(-0.08em);
+  }
+}
+
+.about__sparkle {
+  width: 1.15em;
+  margin-inline: 0.1em;
+  color: var(--color-pure-white);
+}
+
+.about__sparkle--lead {
+  margin-left: 0;
+  transform: translateY(-0.12em);
+}
+
+.about__sparkle--tail {
+  margin-right: 0;
+  transform: translateY(-0.08em);
+}
+
+.visit-section__cta-line {
+  display: block;
+}
+
+.visit-section__cta-sparkle {
+  width: 0.92em;
+  margin-inline: 0.1em;
+}
+
+.visit-section__cta-sparkle--lead {
+  margin-left: 0;
+  transform: translateY(-0.12em);
+}
+
+.visit-section__cta-sparkle--tail {
+  margin-right: 0;
+  transform: translateY(-0.08em);
+}
+
+.final-cta__sparkle {
+  width: 0.9em;
+  margin-inline: 0.12em;
+  vertical-align: -0.12em;
+}
+
+.final-cta__sparkle--lead {
+  margin-left: 0;
+}
+
+.final-cta__sparkle--tail {
+  margin-right: 0;
+}
+
 .brand-motion--cta {
   position: absolute;
   z-index: 0;

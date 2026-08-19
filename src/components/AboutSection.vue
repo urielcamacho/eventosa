@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useSectionReveal } from '../composables/useSectionReveal'
 import { assetUrl } from '../config/assets'
-import BrandMotion from './BrandMotion.vue'
+import SparkleCluster from './SparkleCluster.vue'
 
 const root = ref<HTMLElement | null>(null)
 useSectionReveal(root)
@@ -26,8 +26,11 @@ useSectionReveal(root)
       <div class="about__content">
         <p data-reveal class="eyebrow">Nosotros</p>
         <div id="about-title" class="about__statement" data-reveal>
-          <BrandMotion variant="about" />
-          <p>Creamos atmósferas que brillan<br />por un momento...<br />y dejan la magia por siempre.</p>
+          <p>
+            <span><SparkleCluster class="about__sparkle about__sparkle--lead" />Creamos atmósferas que brillan</span><br />
+            por un momento...<br />
+            <span>y dejan la magia por siempre.<SparkleCluster class="about__sparkle about__sparkle--tail" /></span>
+          </p>
         </div>
         <img data-reveal class="about__wordmark" :src="assetUrl('/brand/eventosa-horizontal-olive.png')" alt="Eventosa" />
       </div>

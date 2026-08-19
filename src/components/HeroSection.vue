@@ -2,7 +2,7 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import BrandMotion from './BrandMotion.vue'
+import SparkleCluster from './SparkleCluster.vue'
 import { assetUrl } from '../config/assets'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -70,14 +70,13 @@ onBeforeUnmount(() => {
         fetchpriority="high"
       />
     </div>
-    <BrandMotion variant="hero" />
     <div class="hero__shade" aria-hidden="true"></div>
     <div class="hero__content page-shell">
       <h1 id="hero-title" class="hero__title">
-        <span class="hero__line-mask"><span data-hero-reveal>Creamos <em>momentos</em> que</span></span>
+        <span class="hero__line-mask"><span data-hero-reveal><SparkleCluster class="hero__sparkle hero__sparkle--lead" />Creamos <em>momentos</em> que</span></span>
         <span class="hero__line-mask"><span data-hero-reveal>trascienden lo cotidiano</span></span>
         <span class="hero__line-mask"><span data-hero-reveal>y se convierten en las</span></span>
-        <span class="hero__line-mask"><span data-hero-reveal><em>mejores memorias</em></span></span>
+        <span class="hero__line-mask"><span data-hero-reveal><em>mejores memorias</em><SparkleCluster class="hero__sparkle hero__sparkle--tail" /></span></span>
       </h1>
       <div data-hero-reveal class="hero__location">Puebla, México</div>
       <div data-hero-reveal class="hero__scroll" aria-hidden="true">
