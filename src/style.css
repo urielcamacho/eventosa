@@ -2648,10 +2648,10 @@ em {
   height: 3.25rem;
   place-items: center;
   border: 0;
-  outline: 1px solid rgb(111 104 53 / 22%);
+  outline: 1px solid rgb(111 104 53 / 36%);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--color-brand-cream) 92%, transparent);
-  color: var(--color-brand-olive-accessible);
+  background: var(--color-brand-olive-accessible);
+  color: var(--color-pure-white);
   box-shadow: 0 0.5rem 1.5rem rgb(37 35 24 / 12%);
   cursor: pointer;
   transition: transform 220ms ease, background-color 220ms ease;
@@ -2659,7 +2659,7 @@ em {
 
 .services__control:hover,
 .services__control:focus-visible {
-  background: var(--color-brand-yellow);
+  background: var(--color-brand-olive);
   transform: scale(1.06);
 }
 
@@ -3037,6 +3037,11 @@ em {
   }
 }
 
+/* Keep the editorial emphasis in the hero subordinate to its Manrope copy. */
+.hero__title em {
+  font-size: 1.1em;
+}
+
 @media (min-width: 768px) {
   .projects__grid {
     grid-template-rows: 19rem 11rem;
@@ -3273,6 +3278,7 @@ em {
 
 .services__grid--wireframe .service-item__copy h3 {
   margin: 0 0 0.55rem;
+  font-size: clamp(1.85rem, 2.65vw, 2.75rem);
 }
 
 .services__grid--wireframe .service-item p {
@@ -3801,7 +3807,7 @@ em {
 
 /* Floral texture separates the hero and About sheets without introducing a new asset. */
 .hero-about-divider {
-  padding-top: clamp(4.25rem, 6vw, 6.5rem);
+  padding-top: 0.25rem;
   overflow: hidden;
   background: var(--color-pure-white);
 }
@@ -4174,6 +4180,11 @@ em {
   font-family: var(--font-editorial);
   font-style: italic;
   font-weight: 200;
+}
+
+/* Service descriptions retain their editorial face with a touch more contrast. */
+.services__grid--wireframe .service-item p {
+  font-weight: 500;
 }
 
 /* The Visítanos layout intentionally keeps its contact card and CTA in Manrope. */
