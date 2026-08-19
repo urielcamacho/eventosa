@@ -56,8 +56,8 @@ useSectionReveal(root)
 
       <div class="visit-section__cta" data-reveal>
         <p>
-          <span class="visit-section__cta-line"><SparkleCluster class="visit-section__cta-sparkle visit-section__cta-sparkle--lead" />Creamos instantes que se transforman en</span>
-          <span class="visit-section__cta-line">algo más grande: <em>lo inolvidable...</em><SparkleCluster class="visit-section__cta-sparkle visit-section__cta-sparkle--tail" /></span>
+          <span class="visit-section__cta-line"><SparkleCluster class="visit-section__cta-sparkle visit-section__cta-sparkle--lead" direction="leading" />Creamos instantes que se transforman en</span>
+          <span class="visit-section__cta-line">algo más grande: <em>lo inolvidable...</em><SparkleCluster class="visit-section__cta-sparkle visit-section__cta-sparkle--tail" direction="trailing" /></span>
         </p>
         <WhatsAppButton label="WhatsApp" variant="light" />
       </div>

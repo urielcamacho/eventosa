@@ -27,9 +27,9 @@ useSectionReveal(root)
         <p data-reveal class="eyebrow">Nosotros</p>
         <div id="about-title" class="about__statement" data-reveal>
           <p>
-            <span><SparkleCluster class="about__sparkle about__sparkle--lead" />Creamos atmósferas que brillan</span><br />
+            <span><SparkleCluster class="about__sparkle about__sparkle--lead" direction="leading" />Creamos atmósferas que brillan</span><br />
             por un momento...<br />
-            <span>y dejan la magia por siempre.<SparkleCluster class="about__sparkle about__sparkle--tail" /></span>
+            <span>y dejan la magia por siempre.<SparkleCluster class="about__sparkle about__sparkle--tail" direction="trailing" /></span>
           </p>
         </div>
         <img data-reveal class="about__wordmark" :src="assetUrl('/brand/eventosa-horizontal-olive.png')" alt="Eventosa" />

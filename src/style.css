@@ -2055,6 +2055,11 @@ em {
   overflow: visible;
 }
 
+.sparkle-cluster--trailing svg {
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
 .sparkle-cluster__large,
 .sparkle-cluster__medium,
 .sparkle-cluster__small {
@@ -2062,13 +2067,14 @@ em {
 }
 
 .hero__sparkle {
+  width: 1.45em;
   margin-inline: 0.12em;
 }
 
 .hero__sparkle--lead {
   margin-left: 0;
-  margin-right: -1.25em;
-  transform: translate(-1.25em, -0.09em);
+  margin-right: -1.58em;
+  transform: translate(-1.58em, -0.09em);
 }
 
 .hero__sparkle--tail {
@@ -2078,8 +2084,8 @@ em {
 
 /* The first sparkle deliberately projects left of the copy, as in the hero artwork. */
 .hero__line-mask:first-child {
-  margin-left: -1.25em;
-  padding-left: 1.25em;
+  margin-left: -1.58em;
+  padding-left: 1.58em;
 }
 
 @media (max-width: 767px) {
@@ -2097,7 +2103,8 @@ em {
 }
 
 .about__sparkle {
-  width: 1.15em;
+  /* The main star fills roughly one cap-height in the PDF. */
+  width: 1.55em;
   margin-inline: 0.1em;
   color: var(--color-pure-white);
 }
@@ -2117,7 +2124,7 @@ em {
 }
 
 .visit-section__cta-sparkle {
-  width: 0.92em;
+  width: 1.55em;
   margin-inline: 0.1em;
 }
 
@@ -2132,7 +2139,7 @@ em {
 }
 
 .final-cta__sparkle {
-  width: 0.9em;
+  width: 1.55em;
   margin-inline: 0.12em;
   vertical-align: -0.12em;
 }

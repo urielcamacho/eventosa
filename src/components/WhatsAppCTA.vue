@@ -22,7 +22,7 @@ useSectionReveal(root)
     <div class="final-cta__shade" aria-hidden="true" />
     <div class="page-shell final-cta__content">
       <p data-reveal class="eyebrow eyebrow--light">Hablemos de tu evento</p>
-      <h2 id="contact-title" data-reveal><SparkleCluster class="final-cta__sparkle final-cta__sparkle--lead" />Hagamos que tu celebración se sienta <em>tan única como tú.</em><SparkleCluster class="final-cta__sparkle final-cta__sparkle--tail" /></h2>
+      <h2 id="contact-title" data-reveal><SparkleCluster class="final-cta__sparkle final-cta__sparkle--lead" direction="leading" />Hagamos que tu celebración se sienta <em>tan única como tú.</em><SparkleCluster class="final-cta__sparkle final-cta__sparkle--tail" direction="trailing" /></h2>
       <p data-reveal>Escríbenos por WhatsApp y cuéntanos la fecha, el tipo de evento y lo que necesitas. Empecemos a darle forma a tu idea.</p>
       <div data-reveal>
         <WhatsAppButton label="Platiquemos por WhatsApp" variant="light" />
