@@ -2777,7 +2777,7 @@ em {
 
 @media (max-width: 1100px) {
   .services__grid--wireframe .service-item {
-    flex-basis: calc((100% - clamp(0.2rem, 2.2vw, 2rem)) / 2);
+    flex-basis: calc((100% - (2 * clamp(0.2rem, 2.2vw, 2rem))) / 3);
   }
 }
 
@@ -3246,6 +3246,23 @@ em {
 
   .projects__grid .project--main .project-item__figure {
     aspect-ratio: 16 / 9;
+  }
+
+  /* Keep project labels legible inside the compact three-card mobile row. */
+  .project-item__figure figcaption {
+    gap: 0.12rem;
+    padding: 1.75rem 0.55rem 0.55rem;
+  }
+
+  .project-item__figure figcaption span {
+    font-size: clamp(0.9rem, 4.8vw, 1.25rem);
+    line-height: 1.05;
+  }
+
+  .project-item__figure figcaption small {
+    font-size: clamp(0.4rem, 1.85vw, 0.52rem);
+    line-height: 1.2;
+    letter-spacing: 0.035em;
   }
 
   .projects__controls--overlay {
@@ -4111,6 +4128,17 @@ em {
   .services__grid--wireframe .service-item {
     min-width: 100%;
     flex-basis: 100%;
+  }
+
+  /* One complete card per swipe: the snap point must not leave its neighbor clipped. */
+  .services__grid--wireframe {
+    gap: 0;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
+  }
+
+  .services__grid--wireframe .service-item {
+    scroll-snap-stop: always;
   }
 
   .section-banner__services .section-banner__inner > p {

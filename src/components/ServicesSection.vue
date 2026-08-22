@@ -11,7 +11,7 @@ const servicesTrack = ref<HTMLElement | null>(null)
 useSectionReveal(root)
 
 function scrollServices(direction: number) {
-  servicesTrack.value?.scrollBy({ left: direction * servicesTrack.value.clientWidth * 0.86, behavior: 'smooth' })
+  servicesTrack.value?.scrollBy({ left: direction * servicesTrack.value.clientWidth, behavior: 'smooth' })
 }
 </script>
 
